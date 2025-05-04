@@ -1,0 +1,19 @@
+{
+  "name": "wsi_viewer",
+  "version": "1.0.0",
+  "description": "The backend is ran by `uvicorn main:app --reload --port 5000`.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\" \"npm run start-electron\"",
+    "start-electron": "wait-on http://localhost:3000 && electron .",
+    "start-backend": "uvicorn main:app --reload --port 5000",
+    "start-frontend": "cd frontend && npm run start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^36.1.0",
+    "electron-is-dev": "^3.0.1",
+    "wait-on": "^8.0.3"
+  }
+}
