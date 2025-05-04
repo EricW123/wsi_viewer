@@ -5,10 +5,11 @@ import routeMap from '@/routes/routeMap'
 
 export default function DynamicPage() {
   const { slug } = useParams()
-  const PageComponent = routeMap[slug as string]
+  const route = routeMap[slug as string] || routeMap['Dashboard'] // Fallback to Dashboard if slug is not found
 
+  const PageComponent = route.element
   if (!PageComponent) {
-    return routeMap['Dashboard'] // Fallback to Dashboard if the slug is not found
+    return <div>404: Page not found</div>
   }
 
   return <PageComponent />

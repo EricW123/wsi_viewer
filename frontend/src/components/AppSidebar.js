@@ -14,8 +14,8 @@ import CIcon from '@coreui/icons-react'
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import newLogo from 'src/assets/brand/TissueLab_transparent.png'
-import { sygnet } from 'src/assets/brand/sygnet'
+import newLogo from '@/../public/brand/TissueLab_transparent.png'
+import { sygnet } from '@/../public/brand/sygnet'
 
 // sidebar nav config
 import navigation from './NavItems'

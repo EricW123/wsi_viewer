@@ -3,14 +3,14 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import { CContainer, CSpinner } from '@coreui/react'
 
 // routes config
-import routes from '../routes'
+import routeMap from '@/routes/routeMap'
 
 const AppContent = () => {
   return (
     <div>
       <Suspense fallback={<CSpinner color="primary" />}>
         <Routes>
-          {routes.map((route, idx) => {
+          {routeMap.map((route, idx) => {
             return (
               route.element && (
                 <Route

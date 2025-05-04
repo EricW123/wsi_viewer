@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CCard, CCardHeader, CCardBody, CButton } from '@coreui/react';
-import { DocsLink } from 'src/components';
+import { DocsLink } from '@/components';
 import dynamic from 'next/dynamic';
 import './ImageViewer.css';
 import CIcon from '@coreui/icons-react';

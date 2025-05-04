@@ -1,4 +1,4 @@
-import './globals.css'
+// import './globals.css'
 import type { Metadata } from 'next'
 import StoreProvider from '@/store/StoreProvider'
 
